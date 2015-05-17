@@ -1,11 +1,11 @@
+#!/usr/bin/python3
 # Pretty-printers for SystemC23
-
+#
 # This file was created to Pretty-Print Datatypes from SystemC.
 # For more informations about Pretty-Printers see https://sourceware.org/gdb/wiki/STLSupport
-# or http://aheimberger.bplaced.net/
-
+#
 # Copyright (C) 2014 Andreas Heimberger
-
+#
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -18,7 +18,6 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 # ------------------------------------------------------------------------------------
 
 import gdb
@@ -28,8 +27,6 @@ from decimal import *
 
 class ScBit:
     """Print a sc_bit object."""
-    # value stored as bool
-
     def __init__(self, val):
         self.val = val
 
@@ -166,6 +163,7 @@ class ScBigUInt_ScBigInt:
 
         return str(sgn * int(output,2))
 
+
 class ScUFixed_ScFixed_ScUFix_ScFix:
     """Print a sc_bigint object."""
 
@@ -175,7 +173,7 @@ class ScUFixed_ScFixed_ScUFix_ScFix:
     def to_string(self):
         wl = self.val["m_params"]["m_type_params"]["m_wl"]
         iwl = self.val["m_params"]["m_type_params"]["m_iwl"]
-        q_mode = self.val["m_params"]["m_type_params"]["m_q_mode"]   
+        q_mode = self.val["m_params"]["m_type_params"]["m_q_mode"]
         o_mode = self.val["m_params"]["m_type_params"]["m_o_mode"]
         n_bits = self.val["m_params"]["m_type_params"]["m_n_bits"]
 
@@ -220,7 +218,7 @@ class ScUFixed_ScFixed_ScUFix_ScFix:
         out_int = "0"
         if int_is_zero is False:
             for i in range(msw, (wp-1), -1):
-                tmp = numpy.uint32(int_part[i]) 
+                tmp = numpy.uint32(int_part[i])
                 out_int += str(bin(tmp)[2:].zfill(32))
 
         bits_frac = int(wl - iwl)
@@ -243,22 +241,28 @@ class ScUFixed_ScFixed_ScUFix_ScFix:
         if (bits_frac != 0):
             precision = Decimal(1.0) / Decimal(2) ** Decimal(bits_used)
 
-        getcontext().prec = 29
+        getcontext().prec = 100 ### hmmm whats the real length????
         frac = (Decimal(int(out_frac,2)) * Decimal(precision)).normalize()
 
+        ret = ""
         if frac_is_zero is False:
-            return str(Decimal(sgn) * Decimal(int(out_int, 2))) + "," + str(frac)[2:]
-        else:
-            return str(Decimal(sgn) * Decimal(int(out_int, 2)))
+            ret = "." + str(frac)[2:]
 
-# ------------------------------------------------------------------------------------
+        if out_int is not "0":
+            ret = str(Decimal(sgn) * Decimal(int(out_int, 2))) + ret
+
+        if ret == "":
+            return "0"
+
+        return ret
+
 
 def build_pretty_printer():
     systemc23 = gdb.printing.RegexpCollectionPrettyPrinter("SystemC23")
     systemc23.add_printer('sc_bit', 'sc_dt::sc_bit', ScBit)
     systemc23.add_printer('sc_bv_base', 'sc_dt::sc_bv<(.*)>', ScBvBase)
     systemc23.add_printer('sc_logic', 'sc_dt::sc_logic', ScLogic)
-    systemc23.add_printer('sc_l', 'sc_dt::sc_lv<(.*)>', ScLV)
+    systemc23.add_printer('sc_lv', 'sc_dt::sc_lv<(.*)>', ScLV)
     systemc23.add_printer('sc_int', 'sc_dt::sc_int<(.*)>', ScIntBase)
     systemc23.add_printer('sc_uint', 'sc_dt::sc_uint<(.*)>', ScUIntBase)
     systemc23.add_printer('sc_bigint', 'sc_bigint<(.*)>', ScBigUInt_ScBigInt)
@@ -268,6 +272,7 @@ def build_pretty_printer():
     systemc23.add_printer('sc_fix', 'sc_fix', ScUFixed_ScFixed_ScUFix_ScFix)
     systemc23.add_printer('sc_ufix', 'sc_ufix', ScUFixed_ScFixed_ScUFix_ScFix)
     return systemc23
+
 
 def register_systemc23_printers(val):
     gdb.printing.register_pretty_printer(

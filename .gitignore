@@ -1,0 +1,7 @@
+# Specific Folders
+/systemc23/__pycache__
+/verification/tests
+
+# Executables
+*.out
+*.pyc

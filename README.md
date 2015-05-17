@@ -1,21 +1,15 @@
-SystemC Pretty-Printer
-======================
+## ![SystemC 2.3 Pretty Printer](./img/logo.png)
 
-The current implementation includes following datatypes:
-- sc\_bit
-- sc\_bv\_base
-- sc\_logic
-- sc\_l
-- sc\_int
-- sc\_uint
-- sc\_bigint
-- sc\_biguint
-- sc\_fixed
-- sc\_ufixed
-- sc\_fix
-- sc\_ufix
+**Goals:**
+Currently GDB can not show the value/s stored within the object, because it has now knowledge about the data-structure. With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Printing.html#Pretty-Printing">GDB pretty printers</a> it is possible to tell GDB how to resolve the data structure to show the value of the object. Without pretty printers the complete structure of the object will be shown with no valuable information.
 
-Information and Instruction about installation can be found under the following link:
-http://aheimberger.bplaced.net/2014/11/systemc-23-pretty-printer
+**Implementation of SystemC datatypes:**
+- sc\_bit, sc\_bv\_base,
+- sc\_logic, sc\_lv
+- sc\_int, sc\_uint, sc\_bigint, sc\_biguint
+- sc\_fixed, sc\_ufixed
+- sc\_fix, sc\_ufix
 
-Feel free to modify and improve the Pretty-Printer.
+**Further Instructions:**
+- [Usage](./USAGE.md)
+- [Verification](./VERIFICATION.md)

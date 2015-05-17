@@ -1,4 +1,5 @@
 /*
+// build via:
 g++ -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib-linux64 -Wl,-rpath=$SYSTEMC_HOME/lib-linux64 -o main main.cpp -g -O0 -lsystemc -lm
 */
 
@@ -20,16 +21,16 @@ int sc_main( int, char*[]){
 
     sc_bv<40> test2 = "1100110011001100110011001100110011001100";
     std::cout  << "test2 sc_bv: " << test2 << std::endl << std::endl;
-    
+
     sc_bv<40> test2_1 = "1000000000000000000000000000000000000000";
     std::cout  << "test2_1 sc_bv: " << test2_1 << std::endl << std::endl;
 
     sc_bv<32> test2_2 = "11001100110011001100110011001100";
     std::cout  << "test2_2 sc_bv: " << test2_2 << std::endl << std::endl;
-  
+
     sc_bv<1> test2_3 = "1";
     std::cout  << "test2_3 sc_bv: " << test2_3 << std::endl << std::endl;
-  
+
 
 // -----------------------------------------------------------------------
 
@@ -67,9 +68,9 @@ int sc_main( int, char*[]){
     test7 = "01XZ";
     std::cout  << "sc_signal_rv: " << test6 << std::endl  << std::endl;
 */
-           
+
 // -----------------------------------------------------------------------
-                             
+
     bool test7 = true;
     std::cout  << "bool: " << test7 << std::endl  << std::endl;
 
@@ -77,7 +78,7 @@ int sc_main( int, char*[]){
 
     int test8 = 10;
     std::cout  << "int: " << test8 << std::endl << std::endl;
-    
+
 // -----------------------------------------------------------------------
 
     sc_int<10> test9 = -100;
@@ -92,7 +93,7 @@ int sc_main( int, char*[]){
 
     sc_bigint<20> test11 = -1000;
     std::cout  << "sc_bigint: " << test11 << std::endl << std::endl;
-    test11 += 1000;     
+    test11 += 1000;
     std::cout  << "sc_bigint: " << test11 << std::endl << std::endl;
     test11 += 1000;
     std::cout  << "sc_bigint: " << test11 << std::endl << std::endl;
