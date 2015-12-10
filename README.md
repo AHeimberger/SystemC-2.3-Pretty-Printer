@@ -1,7 +1,14 @@
 ## ![SystemC 2.3 Pretty-Printer](./img/logo.png)
 
 **Goals:**
-Currently GDB can not show the value/s stored within the object, because it has now knowledge about the data-structure. With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Printing.html#Pretty-Printing">GDB Pretty-Printers</a> it is possible to tell GDB how to resolve the data structure to show the value of the object. Without Pretty-Printers the complete structure of the object will be shown with no valuable information.
+With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Printing.html#Pretty-Printing">GDB Pretty-Printers</a> it is possible to tell GDB how to resolve the data structure to show the value of the object. Without Pretty-Printers the complete structure of the object will be shown with easy to read information.
+
+## Requirements:
+- Needs GDB 7.0 or above, which includes support to write Pretty-Printers.
+- Linux file system knowledge, terminal operations, root permissions.
+- Create the SystemC installation.
+- Download and set Pretty-Printers for SystemC 2.3
+- Compile and run test program
 
 **Implementation of SystemC datatypes:**
 - sc\_bit, sc\_bv\_base,
@@ -12,4 +19,13 @@ Currently GDB can not show the value/s stored within the object, because it has 
 
 **Further Instructions:**
 - [Usage](./USAGE.md)
+- [Install SystemC](./SYSTEMC.md)
 - [Verification](./VERIFICATION.md)
+
+**Ressources:**
+- [SystemC Pretty-Printer Repository](https://github.com/AHeimberger/SystemC-2.3-Pretty-Printer)
+- [Download SystemC 2.3](https://github.com/systemc)
+- [Accellera Forum - SystemC 2.3 Pretty-Printer](http://forums.accellera.org/topic/2140-systemc-23-pretty-printer/?hl=pretty-printer)
+- [Accellera Forum - Help Debug Information](http://forums.accellera.org/topic/1143-sc-intn/)
+- [ricodebug](https://github.com/rainerf/ricodebug)
+- [Eclipse](https://www.eclipse.org/)
