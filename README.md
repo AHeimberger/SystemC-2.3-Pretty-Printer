@@ -18,8 +18,8 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 - sc\_fix, sc\_ufix
 
 **Further Instructions:**
-- [Usage](./USAGE.md)
-- [Install SystemC](./SYSTEMC.md)
+- [Install SystemC 2.3](./SYSTEMC.md)
+- [Install Pretty-Printer](./PRETTYPRINTER.md)
 - [Verification](./VERIFICATION.md)
 
 **Ressources:**
