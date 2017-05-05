@@ -21,7 +21,7 @@ from verification import Verification
 from testcases import TestCases
 
 
-def main(argv=None):
+def main(argv=None):	
     verification = Verification()
     testCases = TestCases(verification)
     testCases.execute()
@@ -31,7 +31,7 @@ def main(argv=None):
     verification.debugFile()
     verification.compareFiles()
 
+
 if __name__ == "__main__":
+    print("\n")
     main()
-
-
