@@ -166,7 +166,7 @@ class Verification:
             file1_line = file1.readline().rstrip()
             file2_line = file2.readline().rstrip()
             if file1_line != file2_line:
-                print("Failure in line number: {0} expected: {1} result was: {2}".format(str(i+1), file1_line, file2_line))
+                print("Failure in line number: {0} \n   - Expected: {1}\n   - Result was: {2}".format(str(i+1), file1_line, file2_line))
                 foundFailure = True
 
         if not foundFailure:
