@@ -83,9 +83,9 @@ class Verification:
     # create the executabel
     def createExecutable(self):
         SYSTEMC_HOME = os.environ['SYSTEMC_HOME']
-        INCPATH = SYSTEMC_HOME + "/include"
-        LIBPATH = SYSTEMC_HOME + "/lib-linux64"
-        SOURCEPATH = SYSTEMC_HOME + "/lib-linux64"
+        INCPATH = os.path.join(SYSTEMC_HOME, "/include")
+        LIBPATH = os.path.join(SYSTEMC_HOME, "/lib-linux64")
+        SOURCEPATH = os.path.join(SYSTEMC_HOME, "/lib-linux64")
         os.system("g++ -I. -I" + INCPATH + " -L. -L" + LIBPATH + " -Wl,-rpath=" + SOURCEPATH + " -o ./tests/main ./tests/main.cpp -g -O0 -lsystemc -lm")
 
     # execute file and write std::cout
