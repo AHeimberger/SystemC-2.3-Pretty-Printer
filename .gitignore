@@ -1,6 +1,6 @@
 # Specific Folders
-/systemc23/__pycache__
-/verification/tests
+__pycache__/
+tests/
 
 # Executables
 *.out
