@@ -9,42 +9,44 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="650"
+   width="980"
    height="240"
-   viewBox="0 0 649.99999 239.99999"
+   viewBox="0 0 979.99998 239.99999"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="verification.svg">
   <defs
      id="defs4">
     <marker
        inkscape:stockid="Arrow2Lstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Lstart"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path4185"
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) translate(1,0)" />
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(1.1,0,0,1.1,1.1,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Lend"
-       style="overflow:visible;"
+       style="overflow:visible"
        inkscape:isstock="true">
       <path
          id="path4170"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Lstart"
@@ -84,11 +86,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="353.52135"
-     inkscape:cy="67.802322"
+     inkscape:zoom="0.7"
+     inkscape:cx="242.32578"
+     inkscape:cy="16.580834"
      inkscape:document-units="px"
-     inkscape:current-layer="g4160"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1507"
@@ -131,169 +133,183 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Sans6;-inkscape-font-specification:Sans6" /></text>
     <g
        id="g4160"
-       transform="matrix(2,0,0,2,-46.682851,-985.22824)">
+       transform="matrix(2,0,0,2,-46.682851,-985.22824)" />
+    <g
+       id="g4251"
+       transform="translate(172.83746,0)">
       <rect
-         y="903.16064"
-         x="74.07769"
-         height="32.072689"
-         width="59.48423"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1.11477077;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect3442"
-         style="fill:#ffffff;stroke:#000000;stroke-width:1.11477077;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         width="59.48423"
+         height="32.072689"
+         x="74.07769"
+         y="903.16064"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)" />
       <text
-         sodipodi:linespacing="125%"
-         id="text3434"
-         y="910.82214"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="78.565987"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:5px"
-           y="910.82214"
-           x="78.565987"
-           id="tspan3436"
-           sodipodi:role="line">verification.py</tspan><tspan
-           id="tspan3438"
-           style="font-size:5px"
-           y="917.07214"
-           x="78.565987"
-           sodipodi:role="line">testcases.py</tspan><tspan
-           id="tspan4412"
-           style="font-size:5px"
-           y="923.32214"
-           x="78.565987"
-           sodipodi:role="line">----------------------------</tspan><tspan
-           id="tspan3440"
-           style="font-size:5px"
-           y="929.57214"
-           x="78.565987"
-           sodipodi:role="line">python ./main.py</tspan></text>
-      <rect
-         y="866.5943"
-         x="182.5"
-         height="25.281912"
-         width="180.8454"
-         id="rect4263"
-         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
+         y="910.82214"
+         id="text3434"
          sodipodi:linespacing="125%"
-         id="text4265"
-         y="881.32214"
-         x="233.27419"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:5px"
-           y="881.32214"
-           x="233.27419"
-           id="tspan4267"
-           sodipodi:role="line">creates main.cpp test application</tspan></text>
-      <rect
-         y="906.43793"
-         x="182.5"
-         height="25.594675"
-         width="82.163208"
-         id="rect4263-9"
-         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         y="906.43793"
-         x="280.5"
-         height="25.594675"
-         width="82.163208"
-         id="rect4263-9-6"
-         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text4265-0"
-         y="915.24152"
-         x="189.16396"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4317"
-           style="font-size:5px"
-           y="915.24152"
-           x="189.16396"
-           sodipodi:role="line">execute application and</tspan><tspan
-           id="tspan4323"
-           style="font-size:5px"
-           y="921.49152"
-           x="189.16396"
-           sodipodi:role="line">pipe std::cout to file</tspan><tspan
-           id="tspan4360"
-           style="font-size:5px"
-           y="927.74152"
-           x="189.16396"
-           sodipodi:role="line">executed.txt</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4265-0-2"
-         y="913.69049"
-         x="286.90408"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4323-5"
-           style="font-size:5px"
-           y="913.69049"
-           x="286.90408"
-           sodipodi:role="line">debug application and </tspan><tspan
-           id="tspan4356"
-           style="font-size:5px"
-           y="919.94049"
-           x="286.90408"
-           sodipodi:role="line">print variable to file </tspan><tspan
-           style="font-size:5px"
-           y="926.19049"
-           x="286.90408"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)"><tspan
            sodipodi:role="line"
-           id="tspan4202">debugged.txt</tspan></text>
+           id="tspan3436"
+           x="78.565987"
+           y="910.82214"
+           style="font-size:5px">verification.py</tspan><tspan
+           sodipodi:role="line"
+           x="78.565987"
+           y="917.07214"
+           style="font-size:5px"
+           id="tspan3438">testcases.py</tspan><tspan
+           sodipodi:role="line"
+           x="78.565987"
+           y="923.32214"
+           style="font-size:5px"
+           id="tspan4412">----------------------------</tspan><tspan
+           sodipodi:role="line"
+           x="78.565987"
+           y="929.57214"
+           style="font-size:5px"
+           id="tspan3440">python ./main.py</tspan></text>
       <rect
-         y="946.58026"
-         x="182.5"
-         height="25.281912"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4263"
          width="180.8454"
+         height="25.281912"
+         x="182.5"
+         y="866.5943"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="233.27419"
+         y="881.32214"
+         id="text4265"
+         sodipodi:linespacing="125%"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)"><tspan
+           sodipodi:role="line"
+           id="tspan4267"
+           x="233.27419"
+           y="881.32214"
+           style="font-size:5px">creates main.cpp test application</tspan></text>
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4263-9"
+         width="82.163208"
+         height="25.594675"
+         x="182.5"
+         y="906.43793"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)" />
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4263-9-6"
+         width="82.163208"
+         height="25.594675"
+         x="280.5"
+         y="906.43793"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="189.16396"
+         y="915.24152"
+         id="text4265-0"
+         sodipodi:linespacing="125%"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)"><tspan
+           sodipodi:role="line"
+           x="189.16396"
+           y="915.24152"
+           style="font-size:5px"
+           id="tspan4317">execute application and</tspan><tspan
+           sodipodi:role="line"
+           x="189.16396"
+           y="921.49152"
+           style="font-size:5px"
+           id="tspan4323">pipe std::cout to file</tspan><tspan
+           sodipodi:role="line"
+           x="189.16396"
+           y="927.74152"
+           style="font-size:5px"
+           id="tspan4360">executed.txt</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="286.90408"
+         y="913.69049"
+         id="text4265-0-2"
+         sodipodi:linespacing="125%"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)"><tspan
+           sodipodi:role="line"
+           x="286.90408"
+           y="913.69049"
+           style="font-size:5px"
+           id="tspan4323-5">debug application and </tspan><tspan
+           sodipodi:role="line"
+           x="286.90408"
+           y="919.94049"
+           style="font-size:5px"
+           id="tspan4356">print variable to file </tspan><tspan
+           id="tspan4202"
+           sodipodi:role="line"
+           x="286.90408"
+           y="926.19049"
+           style="font-size:5px">debugged.txt</tspan></text>
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect4263-4"
-         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         width="180.8454"
+         height="25.281912"
+         x="182.5"
+         y="946.58026"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)" />
       <text
-         sodipodi:linespacing="125%"
-         id="text4265-0-20"
-         y="957.2619"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="272.52979"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           id="tspan4360-4"
-           style="font-size:5px;text-align:center;text-anchor:middle"
-           y="957.2619"
-           x="272.52979"
-           sodipodi:role="line">compare executed.txt and debugged.txt</tspan><tspan
-           id="tspan4410"
-           style="font-size:5px;text-align:center;text-anchor:middle"
-           y="963.5119"
-           x="272.52979"
-           sodipodi:role="line">print output to shell</tspan></text>
-      <text
+         y="957.2619"
+         id="text4265-0-20"
          sodipodi:linespacing="125%"
-         id="text4414"
-         y="945.36218"
-         x="129.28572"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)"><tspan
+           sodipodi:role="line"
+           x="272.52979"
+           y="957.2619"
+           style="font-size:5px;text-align:center;text-anchor:middle"
+           id="tspan4360-4">compare executed.txt and debugged.txt</tspan><tspan
+           sodipodi:role="line"
+           x="272.52979"
+           y="963.5119"
+           style="font-size:5px;text-align:center;text-anchor:middle"
+           id="tspan4410">print output to shell</tspan></text>
+      <text
+         xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:90px"
-           y="945.36218"
-           x="129.28572"
+         x="129.28572"
+         y="945.36218"
+         id="text4414"
+         sodipodi:linespacing="125%"
+         transform="matrix(2,0,0,2,-46.682855,-985.22823)"><tspan
+           sodipodi:role="line"
            id="tspan4416"
-           sodipodi:role="line">{</tspan></text>
+           x="129.28572"
+           y="945.36218"
+           style="font-size:90px">{</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4161"
+         d="m 404.80601,823.45103 0,-22.06798"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54504049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Lstart)" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4161-5"
+         d="m 591.78998,823.45103 0,-22.06798"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54504049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Lstart-7)" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4161-7"
+         d="m 499.75447,903.64362 0,-22.06798"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-3)" />
     </g>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54504049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Lstart)"
-       d="m 404.80601,823.45103 0,-22.06798"
-       id="path4161"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54504049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow2Lstart-7)"
-       d="m 591.78998,823.45103 0,-22.06798"
-       id="path4161-5"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart-3)"
-       d="m 499.75447,903.64362 0,-22.06798"
-       id="path4161-7"
-       inkscape:connector-curvature="0" />
   </g>
 </svg>
