@@ -46,6 +46,7 @@ def writer(pipe):
         s = ln.decode("utf-8")
         if re.match("\(gdb\) \$(?:\d*) = ", s):
             s = re.sub(r"\(gdb\) \$(?:\d*) = ", "", s)
+            s = s.replace("\"", "");
             mFile.write(s)
 
     mFile.close()
@@ -76,7 +77,7 @@ class Verification:
     # write main.cpp testcases and call std::cout
     def addTestCase(self, testvalue):
         self.mTestCases.append(testvalue)
-        self.mFile.write("      std::cout << " + testvalue + " << std::endl; \n\n")
+        self.mFile.write("      std::cout << {0} << std::endl; \n\n".format(testvalue))
 
     # closing main.cpp file
     def closeFile(self):
@@ -107,7 +108,6 @@ class Verification:
         sleep = 1
         num_lines = sum(1 for line in open(APPLICATION_CODE))
 
-        #fw = open("comp2.txt", "w")
         pipe = subprocess.Popen(["gdb", APPLICATION, "-q"], stdin = subprocess.PIPE, stdout = subprocess.PIPE, shell=False, bufsize=0)
 
         th1 = threading.Thread(target=writer, args=(pipe, ))
@@ -156,17 +156,22 @@ class Verification:
         file1.seek(0)
         file2.seek(0)
 
+        foundFailure = False
+
         if num_lines1 < num_lines2:
             print("Failure files are not congruent in number of lines.")
+            foundFailure = True
 
         for i in range(0, lines_to_read, 1):
             file1_line = file1.readline().rstrip()
             file2_line = file2.readline().rstrip()
             if file1_line != file2_line:
-                print("Failure in line number: " + str(i+1) + " expected: " + file1_line + " result was: " + file2_line)
-                break
+                print("Failure in line number: {0} expected: {1} result was: {2}".format(str(i+1), file1_line, file2_line))
+                foundFailure = True
 
-        print ("Happy : All testcases are congruent.")
+        if not foundFailure:
+            print ("Happy : All testcases are congruent.")
+
         file1.close()
         file2.close()
 
@@ -181,85 +186,85 @@ class Verification:
     # create variables
     def std_string(self, value):
         varName = self.createVariableName("std_string_")
-        self.mFile.write("      std::string " + varName + " = \"\\n\\n" + value + "\"; \n")
+        self.mFile.write("      std::string {0} = \"{1}\"; \n".format(varName, value))
         self.addTestCase(varName)
 
     def sc_bit(self, value):
         varName = self.createVariableName("sc_bit_")
-        self.mFile.write("      sc_bit " + varName + "; \n")
-        self.mFile.write("      " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_bit {0}; \n".format(varName))
+        self.mFile.write("      {0} = {1}; \n".format(varName, value))
         self.addTestCase(varName)
 
     def sc_bv(self, size, value):
         varName = self.createVariableName("sc_bv_")
-        self.mFile.write("      sc_bv<" + str(size) + "> " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_bv<{0}> {1} = {2}; \n".format(str(size), varName, value))
         self.addTestCase(varName)
 
     def sc_logic(self, value):
         varName = self.createVariableName("sc_logic_")
-        self.mFile.write("      sc_logic " + varName + "; \n")
-        self.mFile.write("      " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_logic {0}; \n".format(varName))
+        self.mFile.write("      {0} = {1}; \n".format(varName, value))
         self.addTestCase(varName)
 
     def sc_lv(self, size, value):
         varName = self.createVariableName("sc_lv_")
-        self.mFile.write("      sc_lv<" + str(size) + "> " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_lv<{0}> {1} = {2}; \n".format(str(size), varName, value))
         self.addTestCase(varName)
 
     def sc_int(self, size, value):
         #maxiumum 1 <= size <= 64
         varName = self.createVariableName("sc_int_")
-        self.mFile.write("      sc_int<" + str(size) + "> " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_int<{0}> {1} = {2}; \n".format(str(size), varName, value))
         self.addTestCase(varName)
 
     def sc_uint(self, size, value):
         varName = self.createVariableName("sc_uint_")
-        self.mFile.write("      sc_uint<" + str(size) + "> " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_uint<{0}> {1} = {2}; \n".format(str(size), varName, value))
         self.addTestCase(varName)
 
     def sc_bigint(self, size, value):
         varName = self.createVariableName("sc_bigint_")
-        self.mFile.write("      sc_bigint<" + str(size) + "> " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_bigint<{0}> {1} = {2}; \n".format(str(size), varName, value))
         self.addTestCase(varName)
 
     def sc_biguint(self, size, value):
         varName = self.createVariableName("sc_biguint_")
-        self.mFile.write("      sc_biguint<" + str(size) + "> " + varName + " = " + value + "; \n")
+        self.mFile.write("      sc_biguint<{0}> {1} = {2}; \n".format(str(size), varName, value))
         self.addTestCase(varName)
 
     def sc_fixed(self, size1, size2, value, mod1=None, mod2=None):
         varName = self.createVariableName("sc_fixed_")
         if (mod1 != None and mod2 != None):
-            self.mFile.write("      sc_fixed<" + str(size1) + ", " + str(size2) + ", " + str(mod1) + ", " + str(mod2) + "> " + varName + " = " + value + "; \n")
+            self.mFile.write("      sc_fixed<{0}, {1}, {2}, {3}> {4} = {5}; \n".format(str(size1), str(size2), str(mod1), str(mod2), varName, value))
         else:
-            self.mFile.write("      sc_fixed<" + str(size1) + ", " + str(size2) + "> " + varName + " = " + value + "; \n")
+            self.mFile.write("      sc_fixed<{0}, {1}> {2} = {3}; \n".format(str(size1), str(size2), varName, value))
         self.addTestCase(varName)
 
     def sc_ufixed(self, size1, size2, value, mod1=None, mod2=None):
         varName = self.createVariableName("sc_ufixed_")
         if (mod1 != None and mod2 != None):
-            self.mFile.write("      sc_ufixed<" + str(size1) + ", " + str(size2) + ", " + str(mod1) + ", " + str(mod2) + "> " + varName + " = " + value + "; \n")
+            self.mFile.write("      sc_ufixed<{0}, {1}, {2}, {3}> {4} = {5}; \n".format(str(size1), str(size2), str(mod1), str(mod2), varName, value))
         else:
-            self.mFile.write("      sc_ufixed<" + str(size1) + ", " + str(size2) + "> " + varName + " = " + value + "; \n")
+            self.mFile.write("      sc_ufixed<{0}, {1}> {2} = {3}; \n".format(str(size1), str(size2), varName, value))
         self.addTestCase(varName)
 
     def sc_fix(self, size1, size2, value,  mod1=None, mod2=None):
         varName = self.createVariableName("sc_fix_")
         if (mod1 != None and mod2 != None):
-            self.mFile.write("      sc_fix " + varName + "(" + str(size1) + ", " + str(size2) + ", " + str(mod1) + ", " + str(mod2) + ");")
-            self.mFile.write(varName + " = " + value + "; \n")
+            self.mFile.write("      sc_fix {0} ({1}, {2}, {3}, {4}); \n".format(varName, str(size1), str(size2), str(mod1), str(mod2)))
+            self.mFile.write("      {0} = {1}; \n".format(varName, value))
         else:
-            self.mFile.write("      sc_fix " + varName + "(" + str(size1) + ", " + str(size2) + ");")
-            self.mFile.write(varName + " = " + value + "; \n")
+            self.mFile.write("      sc_fix {0} ({1}, {2}); \n".format(varName, str(size1), str(size2)))
+            self.mFile.write("      {0} = {1}; \n".format(varName, value))
         self.addTestCase(varName)
 
     def sc_ufix(self, size1, size2, value,  mod1=None, mod2=None):
         varName = self.createVariableName("sc_ufix_")
         if (mod1 != None and mod2 != None):
-            self.mFile.write("      sc_ufix " + varName + "(" + str(size1) + ", " + str(size2) + ", " + str(mod1) + ", " + str(mod2) + ");")
-            self.mFile.write(varName + " = " + value + "; \n")
+            self.mFile.write("      sc_ufix {0} ({1}, {2}, {3}, {4}); \n".format(varName, str(size1), str(size2), str(mod1), str(mod2)))
+            self.mFile.write("      {0} = {1}; \n".format(varName, value))
         else:
-            self.mFile.write("      sc_ufix " + varName + "(" + str(size1) + ", " + str(size2) + ");")
-            self.mFile.write(varName + " = " + value + "; \n")
+            self.mFile.write("      sc_ufix {0} ({1}, {2}); \n".format(varName, str(size1), str(size2)))
+            self.mFile.write("      {0} = {1}; \n".format(varName, value))
         self.addTestCase(varName)
 
