@@ -1,7 +1,7 @@
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Build Badge Travis](https://travis-ci.org/AHeimberger/SystemC-2.3-Pretty-Printer.svg?branch=master)
 
-## ![SystemC 2.3 Pretty-Printer](./img/logo.svg)
+## ![SystemC 2.3 Pretty-Printer](./img/logo.png)
 
 **Goals:**
 With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Printing.html#Pretty-Printing">GDB Pretty-Printers</a> it is possible to tell GDB how to resolve the data structure to show the value of the object. Without Pretty-Printers the complete structure of the object will be shown with easy to read information.
