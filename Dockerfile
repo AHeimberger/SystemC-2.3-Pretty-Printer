@@ -71,10 +71,6 @@ RUN git clone -b ${GIT_BRANCH} ${GIT_URL} ${DIR_PROJECT} && \
 	if [ ${GIT_HASH} != "no-hash" ]; then cd ${DIR_PROJECT} && git reset --hard ${GIT_HASH}; fi
 
 
-# setup the working directory
-WORKDIR ${DIR_HOME}
-
-
 # lets create the .gdbinit file
 RUN echo "python\n\
 import sys, os\n\
@@ -85,4 +81,13 @@ sys.path.insert(0, home + '/project/systemc23/')\n\
 from systemc23printers import register_systemc23_printers\n\
 register_systemc23_printers (None)\n\
 \n\
-end" > .gdbinit
+end" > ${DIR_HOME}/.gdbinit
+
+
+# setup the working directory
+WORKDIR ${DIR_PROJECT}
+
+
+# setup entrypoint function
+ENTRYPOINT ["./scripts/entrypoint.sh"]
+CMD ["help"]
