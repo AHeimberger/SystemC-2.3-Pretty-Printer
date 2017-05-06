@@ -86,8 +86,3 @@ from systemc23printers import register_systemc23_printers\n\
 register_systemc23_printers (None)\n\
 \n\
 end" > .gdbinit
-
-
-# lets run the verification file
-RUN cd ${DIR_PROJECT}/verification/ && \
-	python3 verification.py

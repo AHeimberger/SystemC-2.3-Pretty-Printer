@@ -4,8 +4,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t example .
+  - docker build -t systemc .
   - docker images
 
-script:
-  - docker run --rm=true example
+verification:
+  - docker run --rm=true systemc verification
