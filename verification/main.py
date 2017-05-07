@@ -19,6 +19,7 @@
 
 from verification import Verification
 from testcases import TestCases
+import sys
 
 
 def main(argv=None):	
@@ -29,7 +30,8 @@ def main(argv=None):
     verification.createExecutable()
     verification.executeFile()
     verification.debugFile()
-    verification.compareFiles()
+    if not verification.isOk():
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -150,7 +150,7 @@ class Verification:
         print("\n\n")
 
     # comparing files to see difference between pretty printer and sdt::cout print
-    def compareFiles(self):
+    def isOk(self):
         print("Compare Files:")
         print("-"*90)
 
@@ -164,24 +164,22 @@ class Verification:
         file1.seek(0)
         file2.seek(0)
 
-        foundFailure = False
+        verificationIsOk = True
 
         if num_lines1 < num_lines2:
             print("Failure files are not congruent in number of lines.")
-            foundFailure = True
+            verificationIsOk = False
 
         for i in range(0, lines_to_read, 1):
             file1_line = file1.readline().rstrip()
             file2_line = file2.readline().rstrip()
             if file1_line != file2_line:
                 print("Failure in line number: {0} \n   - Expected: {1}\n   - Result was: {2}".format(str(i+1), file1_line, file2_line))
-                foundFailure = True
-
-        if not foundFailure:
-            print ("Happy : All testcases are congruent.")
+                verificationIsOk = False
 
         file1.close()
         file2.close()
+        return verificationIsOk
 
     # creates an internal variable name and stores it within a list of variablenames for debug
     def createVariableName(self, strVarName):
