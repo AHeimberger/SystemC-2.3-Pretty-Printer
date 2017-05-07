@@ -24,7 +24,8 @@ RUN apt-get -qq update && \
 	build-essential \
 	gdb \
 	python3 \
-	python3-pip && \
+	python3-pip \
+	vim && \
 	\
 	pip3 install --upgrade pip && \
 	pip3 install numpy
@@ -37,7 +38,7 @@ ENV DIR_PROJECT		${DIR_HOME}/project
 ENV SYSTEMC_HOME	/opt/${SYSTEMC_VERSION}
 
 
-# lets get systemc in /opt
+# lets get systemc
 RUN echo -e "SYSTEMC_VERSION ${SYSTEMC_VERSION}" && \
 	echo -e "SYSTEMC_HOME ${SYSTEMC_HOME}\n\n" && \
 	cd /tmp && \
