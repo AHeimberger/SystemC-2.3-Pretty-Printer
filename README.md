@@ -21,14 +21,10 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 - sc\_fix, sc\_ufix
 
 **Further Instructions:**
-- [Install SystemC 2.3](./SYSTEMC.md)
-- [Install Pretty-Printer](./PRETTYPRINTER.md)
-- [Verification](./VERIFICATION.md)
+- [Install SystemC 2.3](./documentation/systemc.md)
+- [Install Pretty-Printer](./documentation/pretty-printer.md)
+- [Verification](./documentation/verification.md)
 
 **Ressources:**
-- [SystemC Pretty-Printer Repository](https://github.com/AHeimberger/SystemC-2.3-Pretty-Printer)
 - [Download SystemC 2.3](https://github.com/systemc)
 - [Accellera Forum - SystemC 2.3 Pretty-Printer](http://forums.accellera.org/topic/2140-systemc-23-pretty-printer/?hl=pretty-printer)
-- [Accellera Forum - Help Debug Information](http://forums.accellera.org/topic/1143-sc-intn/)
-- [ricodebug](https://github.com/rainerf/ricodebug)
-- [Eclipse](https://www.eclipse.org/)
