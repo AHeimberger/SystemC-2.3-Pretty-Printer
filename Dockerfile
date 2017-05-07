@@ -24,8 +24,7 @@ RUN apt-get -qq update && \
 	build-essential \
 	gdb \
 	python3 \
-	python3-pip \
-	vim && \
+	python3-pip && \
 	\
 	pip3 install --upgrade pip && \
 	pip3 install numpy
@@ -48,13 +47,13 @@ RUN echo -e "SYSTEMC_VERSION ${SYSTEMC_VERSION}" && \
 	cd ${SYSTEMC_VERSION} && \
 	mkdir objdir && \
 	cd objdir && \
+	mkdir -p ${SYSTEMC_HOME} && \
 	export CXX=g++ && \
 	../configure --prefix=${SYSTEMC_HOME} && \
 	make && \
 	make install && \
-	make check && \
 	cd ../.. && \
-	rm -rf ${SYSTEMC_VERSION}
+	rm -rfv ${SYSTEMC_VERSION}
 
 
 # lets create the user

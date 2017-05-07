@@ -89,9 +89,9 @@ class Verification:
     # create the executabel
     def createExecutable(self):
         SYSTEMC_HOME = os.environ['SYSTEMC_HOME']
-        INCPATH = os.path.join(SYSTEMC_HOME, "/include")
-        LIBPATH = os.path.join(SYSTEMC_HOME, "/lib-linux64")
-        SOURCEPATH = os.path.join(SYSTEMC_HOME, "/lib-linux64")
+        INCPATH = os.path.join(SYSTEMC_HOME, "include")
+        LIBPATH = os.path.join(SYSTEMC_HOME, "lib-linux64")
+        SOURCEPATH = os.path.join(SYSTEMC_HOME, "lib-linux64")
         print("SYSTEMC_HOME: {0} \nINCPATH: {1} \nLIBPATH: {2} \nSOURCEPATH: {3}".format(SYSTEMC_HOME, INCPATH, LIBPATH, SOURCEPATH))
         os.system("g++ -I. -I {0} -L. -L {1} -Wl,-rpath={2} -o {3} {4} -g -O0 -lsystemc -lm".format(INCPATH, LIBPATH, SOURCEPATH, APPLICATION, APPLICATION_CODE))
 
@@ -99,6 +99,9 @@ class Verification:
     def executeFile(self):
         print("Execute File:")
         print("-"*90)
+        if (not os.path.isfile(APPLICATION) and not os.access(APPLICATION, os.X_OK)):
+            print("main application does not exist, execute not possible\n\n")
+            return
         os.system("{0} > {1}".format(APPLICATION, FILE_RUN_OUTPUT))
         print("\n\n")
 
@@ -108,6 +111,10 @@ class Verification:
         print("-"*90)
         sleep = 1
         num_lines = sum(1 for line in open(APPLICATION_CODE))
+
+        if (not os.path.isfile(APPLICATION) and not os.access(APPLICATION, os.X_OK)):
+            print("main application does not exist, debug not possible\n\n")
+            return
 
         pipe = subprocess.Popen(["gdb", APPLICATION, "-q"], stdin = subprocess.PIPE, stdout = subprocess.PIPE, shell=False, bufsize=0)
 
