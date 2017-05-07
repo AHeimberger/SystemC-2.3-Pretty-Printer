@@ -92,7 +92,7 @@ class Verification:
         INCPATH = os.path.join(SYSTEMC_HOME, "/include")
         LIBPATH = os.path.join(SYSTEMC_HOME, "/lib-linux64")
         SOURCEPATH = os.path.join(SYSTEMC_HOME, "/lib-linux64")
-        print("SYSTEMC_HOME: {0} \nINCPATH: {1} \nLIBPATH: {2} \nSOURCEPATH: {3}")
+        print("SYSTEMC_HOME: {0} \nINCPATH: {1} \nLIBPATH: {2} \nSOURCEPATH: {3}".format(SYSTEMC_HOME, INCPATH, LIBPATH, SOURCEPATH))
         os.system("g++ -I. -I {0} -L. -L {1} -Wl,-rpath={2} -o {3} {4} -g -O0 -lsystemc -lm".format(INCPATH, LIBPATH, SOURCEPATH, APPLICATION, APPLICATION_CODE))
 
     # execute file and write std::cout
