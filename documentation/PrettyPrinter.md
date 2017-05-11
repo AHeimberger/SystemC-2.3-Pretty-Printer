@@ -33,18 +33,14 @@ info pretty-printer
 #    .*
 #    bound
 #    SystemC23
-#    sc_bigint
-#    sc_biguint
 #    sc_bit
 #    sc_bv_base
 #    sc_fix
 #    sc_fixed
-#    sc_int
 #    sc_lv
 #    sc_logic
 #    sc_ufix
 #    sc_ufixed
-#    sc_uint
 ```
 
 **Build an example project:**

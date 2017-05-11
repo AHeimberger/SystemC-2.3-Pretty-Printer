@@ -1,9 +1,7 @@
 ## Installing SystemC:
 It's always better to see the installing instructions INSTALL given by the authors of SystemC. Nevertheless, I will show you the steps I did. Before calling make it's a good idea to open the Makefile with gedit and search for the entry prefix. If the prefix is set to /usr/local/systemc23 the entry was accepted correctly. The last command checks your SystemC installation and shows you, if everything went correct during install.</p>
 
-**Download SystemC**<br/>
-[http://accellera.org/downloads/standards/systemc]
-
+**Download SystemC** : [http://accellera.org/downloads/standards/systemc]
 ```sh
 SYSTEMC_VERSION=systemc-2.3.0a
 cd /tmp
