@@ -18,9 +18,8 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 - sc\_logic, sc\_lv
 - sc\_fixed, sc\_ufixed
 - sc\_fix, sc\_ufix
-
-**Not supported datatypes:**
-- sc\_int, sc\_uint, sc\_bigint, sc\_biguint :: Members of sc_int_base not accessible.
+- sc\_int, sc\_uint
+- sc\_bigint, sc\_biguint
 
 **Ressources:**
 - [Download SystemC 2.3](http://accellera.org/downloads/standards/systemc)
