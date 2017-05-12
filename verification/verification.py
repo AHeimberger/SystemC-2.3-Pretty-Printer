@@ -177,6 +177,9 @@ class Verification:
                 print("Failure in line number: {0} \n   - Expected: {1}\n   - Result was: {2}".format(str(i+1), file1_line, file2_line))
                 verificationIsOk = False
 
+        if verificationIsOk:
+            print("Files are congruent.")
+
         file1.close()
         file2.close()
         return verificationIsOk
