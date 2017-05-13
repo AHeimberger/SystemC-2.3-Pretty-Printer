@@ -9,9 +9,9 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 **Requirements:**
 - Needs GDB 7.0 or above, which includes support to write Pretty-Printers.
 - Linux file system knowledge, terminal operations, root permissions.
-- Create the SystemC installation. [See install SystemC 2.3](./documentation/systemc.md)
-- Download and set Pretty-Printers for SystemC 2.3. [See install Pretty-Printer](./documentation/pretty-printer.md)
-- Compile and run test program. [See verification](./documentation/verification.md)
+- Create the SystemC installation. [See install SystemC 2.3](./documentation/SystemC.md)
+- Download and set Pretty-Printers for SystemC 2.3. [See install Pretty-Printer](./documentation/PrettyPrinter.md)
+- Compile and run test program. [See verification](./documentation/Verification.md)
 
 **Supported datatypes:**
 - sc\_bit, sc\_bv\_base,
