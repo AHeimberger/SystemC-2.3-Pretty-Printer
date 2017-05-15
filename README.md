@@ -1,5 +1,5 @@
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)
-![Build Badge Travis](https://travis-ci.org/AHeimberger/SystemC-2.3-Pretty-Printer.svg?branch=master)
+[![Build Status](https://travis-ci.org/AHeimberger/SystemC-2.3-Pretty-Printer.svg?branch=master)](https://travis-ci.org/AHeimberger/SystemC-2.3-Pretty-Printer)
 
 ## ![SystemC 2.3 Pretty-Printer](./img/logo.png)
 
