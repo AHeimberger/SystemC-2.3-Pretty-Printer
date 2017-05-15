@@ -155,8 +155,10 @@ class Verification:
             file1_line = file1.readline().rstrip()
             file2_line = file2.readline().rstrip()
             if file1_line != file2_line:
-                print("Failure in line number: {0} \n   - Expected: {1}\n   - Result was: {2}".format(str(i+1), file1_line, file2_line))
+                print("{0}FAILED{1}: Line {2} \n   - Expected: {3}\n   - Result:   {4}".format('\033[31m', '\033[0m', str(i+1), file1_line, file2_line))
                 verificationIsOk = False
+            else:
+                print("{0}PASSED{1}: Line {2} \n   - Expected: {3}\n   - Result:   {4}".format('\033[32m', '\033[0m', str(i+1), file1_line, file2_line))
 
         if verificationIsOk:
             print("Files are congruent.")
