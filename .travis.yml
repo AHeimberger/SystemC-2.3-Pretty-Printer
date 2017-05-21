@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t systemc .
+  - docker build --build-arg GIT_BRANCH=${TRAVIS_BRANCH} -build-arg GIT_HASH=${TRAVIS_COMMIT} --tag systemc .
   - docker images
 
 script:
