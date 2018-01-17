@@ -4,7 +4,8 @@ MAINTAINER aheimberger
 
 # setup default build arguments
 ARG SYSTEMC_VERSION=systemc-2.3.0a
-ARG USER_ID=no-id
+ARG GROUP_ID=1000
+ARG USER_ID=1000
 ARG USER_NAME=travisci
 ARG GIT_BRANCH=master
 ARG GIT_URL=https://github.com/AHeimberger/SystemC-2.3-Pretty-Printer.git
@@ -57,7 +58,8 @@ RUN echo -e "SYSTEMC_VERSION ${SYSTEMC_VERSION}" && \
 
 
 # lets create the user
-RUN useradd -ms /bin/bash ${USER_NAME}
+RUN groupadd -g "${GROUP_ID}" "${USER_NAME}" && \
+    useradd -u ${USER_ID} -g ${GROUP_ID} -ms /bin/bash ${USER_NAME}
 USER ${USER_NAME}
 
 
