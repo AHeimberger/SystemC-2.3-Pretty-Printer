@@ -10,7 +10,7 @@ python3 -m pip install numpy
 gedit .gdbinit
 ```
 
-In the next step we have to modify the .gdbinit file in the home directory. This file is loaded by GDB at the start of the debug session. It depends upon your linux version whether this file already exists or not. If this file exists to print datatypes of the <a href="https://sourceware.org/gdb/wiki/STLSupport">standard template library</a>, ensure  this file imports also os, creates a variable to your home directory and registers the Pretty-Printer for SystemC.
+In the next step we have to modify the .gdbinit file in the home directory. This file is loaded by GDB at the start of the debug session. It depends upon your Linux version whether this file already exists or not. If this file exists to print data types of the <a href="https://sourceware.org/gdb/wiki/STLSupport">standard template library</a>, ensure  this file imports also OS, creates a variable to your home directory and registers the Pretty-Printer for SystemC.
 
 ```python
 python
@@ -44,7 +44,7 @@ info pretty-printer
 ```
 
 **Build an example project:**
-Together with the SystemC Pretty-Printer you downloaded a folder called "example", which contains test files to pretty-print SystemC Datatypes. We will now build one of this example files and see if operation of the Pretty-Printer works correctly. See the Makefile within the example directory to get information about building your own projects.
+Together with the SystemC Pretty-Printer you downloaded a folder called "example", which contains test files to pretty-print SystemC data types. We will now build one of this example files and see if operation of the Pretty-Printer works correctly. See the Makefile within the example directory to get information about building your own projects.
 
 ```sh
 cd ~
@@ -52,7 +52,7 @@ cd systemc-pretty-printer/example/Datatypes
 make
 ```
 
-In the next step we will start gdb and print datatypes.
+In the next step we will start gdb and print data types.
 
 ```sh
 gdb main
