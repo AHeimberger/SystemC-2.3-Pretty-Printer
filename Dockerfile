@@ -7,9 +7,6 @@ ARG SYSTEMC_VERSION=systemc-2.3.0a
 ARG GROUP_ID=1000
 ARG USER_ID=1000
 ARG USER_NAME=travisci
-ARG GIT_BRANCH=master
-ARG GIT_URL=https://github.com/AHeimberger/SystemC-2.3-Pretty-Printer.git
-ARG GIT_HASH=no-hash
 
 
 # prerequisites
@@ -60,7 +57,6 @@ RUN echo -e "SYSTEMC_VERSION ${SYSTEMC_VERSION}" && \
 # lets create the user
 RUN groupadd -g "${GROUP_ID}" "${USER_NAME}" && \
     useradd -u ${USER_ID} -g ${GROUP_ID} -ms /bin/bash ${USER_NAME}
-USER ${USER_NAME}
 
 
 # setup directories
@@ -68,13 +64,17 @@ RUN mkdir -p ${DIR_DEPLOY} && \
 	mkdir -p ${DIR_PROJECT}
 
 
-# test it from remote
-RUN git clone -b ${GIT_BRANCH} ${GIT_URL} ${DIR_PROJECT} && \
-  if [ ${GIT_HASH} != "no-hash" ]; then cd ${DIR_PROJECT} && git reset --hard ${GIT_HASH}; fi
-
-
 # test it locally
-# COPY . ${DIR_PROJECT}
+COPY . ${DIR_PROJECT}
+
+
+# change permissions
+RUN chown -R ${USER_NAME}:${USER_NAME} ${DIR_DEPLOY} && \
+	chown -R ${USER_NAME}:${USER_NAME} ${DIR_PROJECT}
+
+
+# change user
+USER ${USER_NAME}
 
 
 # lets create the .gdbinit file
