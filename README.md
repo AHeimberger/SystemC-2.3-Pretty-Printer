@@ -21,6 +21,12 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 - sc\_int, sc\_uint
 - sc\_bigint, sc\_biguint
 
+**Docker Execution**
+
+    docker build -t systemc .
+    docker run --rm=true systemc version
+    docker run --rm=true --security-opt seccomp=unconfined systemc verification
+
 **Ressources:**
 - [Download SystemC 2.3](http://accellera.org/downloads/standards/systemc)
 - [Accellera Forum - SystemC 2.3 Pretty-Printer](http://forums.accellera.org/topic/2140-systemc-23-pretty-printer/?hl=pretty-printer)

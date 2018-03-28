@@ -9,4 +9,4 @@ before_install:
 
 script:
   - docker run --rm=true systemc version
-  - docker run --rm=true systemc verification
+  - docker run --rm=true --security-opt seccomp=unconfined systemc verification
