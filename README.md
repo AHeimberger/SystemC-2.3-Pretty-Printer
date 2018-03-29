@@ -8,7 +8,7 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 
 **Requirements:**
 - Needs GDB 7.0 or above, which includes support to write Pretty-Printers.
-- Create the SystemC installation. [See install SystemC 2.3](./documentation/SystemC.md)
+- Create the SystemC installation, with option *--enable-debug*. [See install SystemC 2.3](./documentation/SystemC.md)
 - Download and set Pretty-Printers for SystemC 2.3. [See install Pretty-Printer](./documentation/PrettyPrinter.md)
 - Compile and run test program. [See verification](./documentation/Verification.md)
 
@@ -20,9 +20,9 @@ With the help of <a href="https://sourceware.org/gdb/onlinedocs/gdb/Pretty-Print
 - sc\_int, sc\_uint
 - sc\_bigint, sc\_biguint
 
-**Docker Execution**
+**Execution with Docker**
 
-    docker build -t systemc .
+    docker build --force-rm=true -t systemc . 
     docker run --rm=true systemc version
     docker run --rm=true --security-opt seccomp=unconfined systemc verification
 

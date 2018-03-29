@@ -1,5 +1,5 @@
 ## Installing SystemC:
-It's always better to see the installing instructions INSTALL given by the authors of SystemC. Nevertheless, I will show you the steps I did. Before calling make it's a good idea to open the Makefile with gedit and search for the entry prefix. If the prefix is set to /usr/local/systemc23 the entry was accepted correctly. The last command checks your SystemC installation and shows you, if everything went correct during install.</p>
+It's always better to see the installing instructions INSTALL given by the authors of SystemC. Nevertheless, I will show you the steps I did. Before calling make it's a good idea to open the Makefile with gedit and search for the entry prefix. If the prefix is set to `/usr/local/systemc23` the entry was accepted correctly. The last command checks your SystemC installation and shows you, if everything went correct during install.
 
 **Download SystemC** : [http://accellera.org/downloads/standards/systemc]
 ```sh
@@ -12,7 +12,7 @@ cd ${SYSTEMC_VERSION}
 mkdir objdir
 cd objdir
 export CXX=g++
-../configure --prefix=${SYSTEMC_HOME}
+../configure --enable-debug --prefix=${SYSTEMC_HOME}
 make
 make install
 make check
@@ -20,9 +20,9 @@ cd ../..
 rm -rf ${SYSTEMC_VERSION}
 ```
 
-As described in INSTALL it is your decision if you leave your objdir folder or not. Later on you can use make to un-install SystemC.
+As described in `INSTALL` it is your decision if you leave your objdir folder or not. Later on you can use make to un-install SystemC.
 
-The following command adds your SystemC directory to the export environment variables. Doing this from the command line will not add the environment variable permanently. Therefore after a logout or closing the shell the variable is lost. To add environment variables permanently see <a href="http://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables">following link</a>. In my case I added a <b>systemc23.sh</b> file to the <b>/etc/profile.d/</b> directory which contains following assignment. Eventually you need to logout and login again.
+The following command adds your SystemC directory to the export environment variables. Doing this from the command line will not add the environment variable permanently. Therefore after a logout or closing the shell the variable is lost. To add environment variables permanently see <a href="http://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables">following link</a>. In my case I added a `systemc23.sh` file to the `/etc/profile.d/` directory which contains following assignment. Eventually you need to logout and login again.
 
 ```sh
 cd /etc/profile.d/

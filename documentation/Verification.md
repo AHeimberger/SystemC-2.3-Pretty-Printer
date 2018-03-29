@@ -10,3 +10,8 @@ This method is not the best. First of all, I don't compare my expectation of out
 
 Further test-cases can be appended within "Testcases.py".
 
+**Execution:**
+
+```python
+python3 verification/main.py
+```

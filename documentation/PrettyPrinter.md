@@ -42,29 +42,3 @@ info pretty-printer
 #    sc_ufix
 #    sc_ufixed
 ```
-
-**Build an example project:**
-Together with the SystemC Pretty-Printer you downloaded a folder called "example", which contains test files to pretty-print SystemC data types. We will now build one of this example files and see if operation of the Pretty-Printer works correctly. See the Makefile within the example directory to get information about building your own projects.
-
-```sh
-cd ~
-cd systemc-pretty-printer/example/Datatypes
-make
-```
-
-In the next step we will start gdb and print data types.
-
-```sh
-gdb main
-break 152
-run
-print test13_3
-# watch the value using the pretty-printer
-disable pretty-printer
-print test13_3
-# value of test13_3 without using the pretty-printer
-enable pretty-printer
-print test13_3
-# watch the value using the pretty-printer
-quit
-```
