@@ -47,7 +47,7 @@ RUN echo -e "SYSTEMC_VERSION ${SYSTEMC_VERSION}" && \
 	cd objdir && \
 	mkdir -p ${SYSTEMC_HOME} && \
 	export CXX=g++ && \
-	../configure --prefix=${SYSTEMC_HOME} && \
+	../configure --enable-debug --prefix=${SYSTEMC_HOME} && \
 	make && \
 	make install && \
 	cd ../.. && \
