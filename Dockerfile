@@ -3,7 +3,7 @@ MAINTAINER aheimberger
 
 
 # setup default build arguments
-ARG SYSTEMC_VERSION=systemc-2.3.0a
+ARG SYSTEMC_VERSION=systemc-2.3.2
 ARG GROUP_ID=1000
 ARG USER_ID=1000
 ARG USER_NAME=travisci
